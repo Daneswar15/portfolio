@@ -174,15 +174,31 @@ body {
     width: 100%;
 }
 
+.hero-name-badge {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--text-primary), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slideUpBlur 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+}
+
 .hero-title {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.3em;
+    animation: slideUpBlur 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+    opacity: 0;
 }
 
 .word {
@@ -216,30 +232,34 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: 900;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 500;
     letter-spacing: 0.5px;
+    animation: slideUpBlur 0.7s ease-out forwards 0.2s;
+    opacity: 0;
 }
 
 .hero-description {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
-    max-width: 500px;
+    max-width: 550px;
     line-height: 1.8;
-    animation: slideUpBlur 0.7s ease-out forwards 0.7s;
+    animation: slideUpBlur 0.7s ease-out forwards 0.3s;
     opacity: 0;
+    font-weight: 500;
 }
 
 .hero-cta {
     display: flex;
     gap: 1.5rem;
-    animation: slideUpBlur 0.7s ease-out forwards 0.8s;
+    animation: slideUpBlur 0.7s ease-out forwards 0.4s;
     opacity: 0;
     margin-bottom: 3rem;
 }
@@ -285,29 +305,45 @@ body {
 .hero-stats {
     display: flex;
     justify-content: space-around;
+    gap: 3rem;
     animation: slideUpBlur 0.7s ease-out forwards 0.9s;
     opacity: 0;
+    width: 100%;
+    margin-top: 2rem;
 }
 
 .stat {
     text-align: center;
+    padding: 1.5rem;
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.stat:hover {
+    border-color: var(--primary);
+    background: rgba(0, 212, 255, 0.12);
 }
 
 .stat-value {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 2.8rem;
+    font-weight: 900;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.5rem;
+    letter-spacing: -1px;
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
     letter-spacing: 0.5px;
+    font-weight: 500;
 }
 
 .scroll-cue {
